@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>感叹号！</title>
+  
+  <subtitle>Metoo</subtitle>
+  <link href="http://www.vizong.cn/atom.xml" rel="self"/>
+  
+  <link href="http://www.vizong.cn/"/>
+  <updated>2022-01-21T06:04:06.332Z</updated>
+  <id>http://www.vizong.cn/</id>
+  
+  <author>
+    <name>Metoo</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>知识点汇总四-Node</title>
+    <link href="http://www.vizong.cn/1/"/>
+    <id>http://www.vizong.cn/1/</id>
+    <published>2022-01-21T02:10:55.000Z</published>
+    <updated>2022-01-21T06:04:06.332Z</updated>
+    
+    
+    <summary type="html">nvm/n管理node版本
+模块化的差异，AMD,COMMONJS,ESMODULE
+AMD：依赖前置 动态引入
+
+commonjs: request引入 动态引入
+
+esmodule: 静态引入
+
+Less(js)，sass(ruby), stylus,css, 命名空间与css module
+本文链接： http://www.vizong.cn/1/</summary>
+    
+    
+    
+    <category term="121202" scheme="http://www.vizong.cn/categories/121202/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>知识点汇总三</title>
+    <link href="http://www.vizong.cn/7/"/>
+    <id>http://www.vizong.cn/7/</id>
+    <published>2022-01-20T07:46:01.000Z</published>
+    <updated>2022-01-21T06:04:06.332Z</updated>
+    
+    
+    <summary type="html">this的指向
+this指代是 【当前对象】所谓的当前对象，是指此刻正在执行这个函数的对象
+
+哪个对象调用函数，函数里面的this指向哪个对象
+
+箭头函数
+ 箭头函数表达式的语法比函数表达式更简洁，并且没有自己的this，arguments，super或new.target。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
+
+从mdn的文档中可以看到：
+
+ * 没有单独的this
+ * 不绑定arguments
+ * 箭头函数不能用作构造器，和 new一起用会抛出错误
+ * 箭头函数没有prototype属性
+
+箭头函数是有构造函数的，但特别的是，它作为一个函数，它是</summary>
+    
+    
+    
+    <category term="前端" scheme="http://www.vizong.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>知识点汇总二</title>
+    <link href="http://www.vizong.cn/6/"/>
+    <id>http://www.vizong.cn/6/</id>
+    <published>2022-01-19T08:39:17.000Z</published>
+    <updated>2022-01-21T06:04:06.332Z</updated>
+    
+    
+    <summary type="html">创建对象的几种方法
+// 第一种方式：字面量
+var o1 = {name:&#39;o1&#39;}
+var o2 = new Object({name:&#39;o2&#39;})
+// 第二种方式：通过构造函数
+var M = function(name){this.name=name};
+var o3 = new M(&#39;o3&#39;);
+// 第三种方式：Object.create
+var p = {name:&#39;p&#39;};
+var o4 = Object.create(p);
+
+
+原型、构造函数、实例、原型链
+
+
+完整图
+
+
+
+instanceof原理
+instanceof 运算符用于测试构造函数的 prototype 属性</summary>
+    
+    
+    
+    <category term="前端" scheme="http://www.vizong.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="面试" scheme="http://www.vizong.cn/categories/%E5%89%8D%E7%AB%AF/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>知识点汇总一</title>
+    <link href="http://www.vizong.cn/5/"/>
+    <id>http://www.vizong.cn/5/</id>
+    <published>2022-01-19T03:08:28.000Z</published>
+    <updated>2022-01-21T06:04:06.332Z</updated>
+    
+    
+    <summary type="html">三栏布局
+高度固定，左右宽度300px,中间自适应
+
+ 1. 浮动
+ 2. 绝对定位
+ 3. flex布局
+ 4. table布局
+ 5. grid布局
+
+CSS盒模型
+css盒子模型 又称框模型 (Box Model) ，包含了元素内容（content）、内边距（padding）、边框（border）、外边距（margin）几个要素
+
+标准模型+IE模型
+css如何设置两种模型
+box-sizing:content-box; // 标准盒模型
+box-sizing:border-box; // IE盒模型
+
+BFC
+BFC(Block formatting context)直译为”块级格式化</summary>
+    
+    
+    
+    <category term="前端" scheme="http://www.vizong.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="面试" scheme="http://www.vizong.cn/categories/%E5%89%8D%E7%AB%AF/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>复习汇总</title>
+    <link href="http://www.vizong.cn/4/"/>
+    <id>http://www.vizong.cn/4/</id>
+    <published>2022-01-05T02:01:39.000Z</published>
+    <updated>2022-01-21T06:04:06.332Z</updated>
+    
+    
+    <summary type="html">XSS和CSRF
+CSRF:跨站请求伪造 未经用户许可，偷偷的使用用户名义，发送恶意请求的攻击。通常情况下借助用户cookie来骗取服务器信任。
+CSRF（通常）发生在第三方域名。 CSRF攻击者（通常）不能获取到Cookie等信息，只是使用。
+
+XSS跨站脚本攻击：XSS本质是Html注入，攻击者在网站上注入恶意的js代码，对客户端页面进行篡改，进而窃取隐私数据比如cookie、session，或者重定向到不好的网站等。
+
+ * 在HTTP头部配上，set-cookie：httponly-这个属性可以防止XSS,它会禁止javascript脚本来访问cookie
+ * secure - 这个</summary>
+    
+    
+    
+    <category term="面试" scheme="http://www.vizong.cn/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+    <category term="面试" scheme="http://www.vizong.cn/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx同一个端口部署两个React项目</title>
+    <link href="http://www.vizong.cn/3/"/>
+    <id>http://www.vizong.cn/3/</id>
+    <published>2022-01-04T07:52:39.000Z</published>
+    <updated>2022-01-21T06:04:06.332Z</updated>
+    
+    
+    <summary type="html">懒
+本文链接： http://www.vizong.cn/3/</summary>
+    
+    
+    
+    <category term="React" scheme="http://www.vizong.cn/categories/React/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown语法</title>
+    <link href="http://www.vizong.cn/2/"/>
+    <id>http://www.vizong.cn/2/</id>
+    <published>2020-01-04T06:43:02.000Z</published>
+    <updated>2022-01-21T06:04:06.332Z</updated>
+    
+    
+    <summary type="html">一、标题
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+######六级标题
+
+一级标题
+二级标题
+三级标题
+四级标题
+五级标题
+######六级标题
+
+二、字体
+**加粗文字**
+*倾斜文字*
+***斜体加粗文字***
+~~加删除线文字~~
+`红色`
+
+加粗文字
+倾斜文字
+斜体加粗文字
+加删除线文字 
+
+红色
+
+三、引用
+&gt;引用内容1
+&gt;&gt;引用内容2
+&gt;&gt;&gt;引用内容3
+
+引用内容1
+
+引用内容2
+
+引用内容3
+
+四、列表
+无序列表 -+* 都可以
+- 列表内容-
++ 列表内容+
+* 列表内容*
+有序列表 数字加点
+1. 列表内容
+2. 列表内容
+3</summary>
+    
+    
+    
+    <category term="Markdown" scheme="http://www.vizong.cn/categories/Markdown/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello word</title>
+    <link href="http://www.vizong.cn/1/"/>
+    <id>http://www.vizong.cn/1/</id>
+    <published>2017-06-29T11:20:26.000Z</published>
+    <updated>2022-01-21T06:04:06.332Z</updated>
+    
+    
+    <summary type="html">Hello word
+function main() {
+    console.log(&quot;Hello World&quot;);
+} 
+
+本文链接： http://www.vizong.cn/1/</summary>
+    
+    
+    
+    <category term="React" scheme="http://www.vizong.cn/categories/React/"/>
+    
+    
+    <category term="React" scheme="http://www.vizong.cn/tags/React/"/>
+    
+  </entry>
+  
+</feed>

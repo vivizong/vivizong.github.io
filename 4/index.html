@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+
+
+  <html class="dark page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>复习汇总 | 感叹号！</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="面试," />
+  
+
+  <meta name="description" content="XSS和CSRF CSRF:跨站请求伪造 未经用户许可，偷偷的使用用户名义，发送恶意请求的攻击。通常情况下借助用户cookie来骗取服务器信任。 CSRF（通常）发生在第三方域名。 CSRF攻击者（通常）不能获取到Cookie等信息，只是使用。  XSS跨站脚本攻击：XSS本质是Html注入，攻击者在网站上注入恶意的js代码，对客户端页面进行篡改，进而窃取隐私数据比如cookie、session，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="复习汇总">
+<meta property="og:url" content="http://www.vizong.cn/4/index.html">
+<meta property="og:site_name" content="感叹号！">
+<meta property="og:description" content="XSS和CSRF CSRF:跨站请求伪造 未经用户许可，偷偷的使用用户名义，发送恶意请求的攻击。通常情况下借助用户cookie来骗取服务器信任。 CSRF（通常）发生在第三方域名。 CSRF攻击者（通常）不能获取到Cookie等信息，只是使用。  XSS跨站脚本攻击：XSS本质是Html注入，攻击者在网站上注入恶意的js代码，对客户端页面进行篡改，进而窃取隐私数据比如cookie、session，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://camo.githubusercontent.com/9a69b0f03116884e80cf566f8542cf014a4dd043fce6ce030d615040461f4e5a/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6d717971696e6766656e672f426c6f672f496d616765732f70726f746f74797065352e706e67">
+<meta property="article:published_time" content="2022-01-05T02:01:39.000Z">
+<meta property="article:modified_time" content="2022-01-21T06:04:06.332Z">
+<meta property="article:author" content="Metoo">
+<meta property="article:tag" content="面试">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://camo.githubusercontent.com/9a69b0f03116884e80cf566f8542cf014a4dd043fce6ce030d615040461f4e5a/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6d717971696e6766656e672f426c6f672f496d616765732f70726f746f74797065352e706e67">
+
+  
+
+  
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?781972f98f874b46f6e07630bf89e654";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+  <!-- <script src="https://cdn.jsdelivr.net/gh/vivizong/vivizong.github.io/js/changeTitle.js"></script> -->
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="感叹号！" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">导航</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">导航</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#XSS%E5%92%8CCSRF"><span class="toc-text">XSS和CSRF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP2-0%E7%9B%B8%E6%AF%941-1"><span class="toc-text">HTTP2.0相比1.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E8%BE%93%E5%85%A5URL%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E5%AE%8C%E6%88%90%E7%9A%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88"><span class="toc-text">从输入URL到页面加载完成的过程中发生了什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%BC%8F%EF%BC%9Ahash%E6%A8%A1%E5%BC%8F%E5%92%8C-history%E6%A8%A1%E5%BC%8F"><span class="toc-text">前端路由的两种模式：hash模式和 history模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E7%94%9F%E6%88%90%E6%B8%B2%E6%9F%93%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-text">页面生成渲染的过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5"><span class="toc-text">浏览器缓存策略</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98"><span class="toc-text">强制缓存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98"><span class="toc-text">协商缓存</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%EF%BC%8C%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">移动端适配，响应式布局的解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">JS数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E5%8F%8A%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-text">原型及原型链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE"><span class="toc-text">作用域和作用域链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AD%E5%8C%85"><span class="toc-text">闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E4%B8%AD%E7%BB%A7%E6%89%BF%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-text">JS中继承实现的几种方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#typeof-amp-amp-instanceof"><span class="toc-text">typeof &amp;&amp; instanceof</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Event-Loop"><span class="toc-text">Event Loop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Promise%E5%8E%9F%E7%90%86"><span class="toc-text">Promise原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BFC"><span class="toc-text">BFC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%AA%E5%85%83%E7%B4%A0%E5%92%8C%E4%BC%AA%E7%B1%BB"><span class="toc-text">伪元素和伪类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-text">CSS3新特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E6%8E%92-reflow-%E5%92%8C%E9%87%8D%E7%BB%98-repaint"><span class="toc-text">重排(reflow)和重绘(repaint)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E6%8E%92"><span class="toc-text">重排</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E9%9D%A2%E6%83%85%E5%86%B5%E4%BC%9A%E5%8F%91%E7%94%9F%E9%87%8D%E6%8E%92%EF%BC%9A"><span class="toc-text">下面情况会发生重排：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E7%BB%98"><span class="toc-text">重绘</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%96%E5%B1%8F%E7%99%BD%E5%B1%8F%E6%97%B6%E9%97%B4%E7%9A%84%E4%BC%98%E5%8C%96"><span class="toc-text">首屏白屏时间的优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BD%E5%B1%8F%E8%BF%87%E7%A8%8B"><span class="toc-text">白屏过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96"><span class="toc-text">前端优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack%E8%AF%A6%E8%A7%A3"><span class="toc-text">webpack详解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Babel%E8%AF%A6%E8%A7%A3"><span class="toc-text">Babel详解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#react%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-text">react的基本原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#react%E5%A6%82%E4%BD%95%E5%81%9A%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-text">react如何做性能优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#react-%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98-%E5%8A%A0%E4%BA%86%E5%93%AA%E4%BA%9B%E4%B8%9C%E8%A5%BF"><span class="toc-text">react 最新版本解决了什么问题 加了哪些东西</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redux%E7%9A%84%E9%87%8D%E7%82%B9%E6%A6%82%E5%BF%B5"><span class="toc-text">redux的重点概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-15%E3%80%8116%E8%BF%9B%E8%A1%8C%E5%AF%B9%E6%AF%94-16%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BA%9F%E5%BC%83"><span class="toc-text">react生命周期 15、16进行对比 16为什么废弃</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hooks%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">hooks如何处理生命周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#interface-%E5%92%8C-type-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">interface 和 type 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class-%E7%BB%84%E4%BB%B6%E4%B8%8E%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">class 组件与函数式组件的区别</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-复习汇总/复习汇总" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">复习汇总</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2022.01.05</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Metoo</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="XSS和CSRF"><a href="#XSS和CSRF" class="headerlink" title="XSS和CSRF"></a>XSS和CSRF</h2><p>CSRF:跨站请求伪造 未经用户许可，偷偷的使用用户名义，发送恶意请求的攻击。通常情况下借助用户cookie来骗取服务器信任。<br>CSRF（通常）发生在第三方域名。 CSRF攻击者（通常）不能获取到Cookie等信息，只是使用。</p>
+<p>XSS跨站脚本攻击：XSS本质是Html注入，攻击者在网站上注入恶意的js代码，对客户端页面进行篡改，进而窃取隐私数据比如cookie、session，或者重定向到不好的网站等。</p>
+<ul>
+<li>在HTTP头部配上，set-cookie：httponly-这个属性可以防止XSS,它会禁止javascript脚本来访问cookie</li>
+<li>secure - 这个属性告诉浏览器仅在请求为https的时候发送cookie<h2 id="HTTP2-0相比1-1"><a href="#HTTP2-0相比1-1" class="headerlink" title="HTTP2.0相比1.1"></a>HTTP2.0相比1.1</h2></li>
+</ul>
+<ol>
+<li>头部压缩。如果同时发出多个请求，头部有相似的字段，协议会消除重复的部分。（HPACK算法：在客户端和服务器维护一张头信息表，所有字段都会存入，生成一个索引号，之后就只发索引号）</li>
+<li>二进制形式。HTTP1.1还是纯文本形式，2版本全面采用二进制形式（头信息帧+数据帧）</li>
+<li>数据流。2版本不是按顺序发送的，所以需要对数据包做标记，客户端还可以指定优先级。</li>
+<li>多路复用。在一个连接里并发多个请求。</li>
+<li>服务器推送，服务器可以主动向客户端发信息。</li>
+</ol>
+<h2 id="从输入URL到页面加载完成的过程中发生了什么"><a href="#从输入URL到页面加载完成的过程中发生了什么" class="headerlink" title="从输入URL到页面加载完成的过程中发生了什么"></a>从输入URL到页面加载完成的过程中发生了什么</h2><ol>
+<li><p>键盘或触屏输入URL并回车确认</p>
+<pre class="line-numbers language-none"><code class="language-none">一个合法的URL包括协议，域名，端口号，请求资源路径，传参信息，hash值。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>URL解析/DNS解析查找域名IP地址</p>
+</li>
+<li><p>建立TCP连接 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/bj-mr-li/p/11106390.html">三次握手</a></p>
+</li>
+<li><p>网络连接发起HTTP请求</p>
+</li>
+<li><p><a href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5">浏览器缓存策略</a></p>
+</li>
+<li><p>相应http请求</p>
+<pre class="line-numbers language-none"><code class="language-none">响应报文：响应行（协议、版本、状态码） 响应头 响应体
+
+状态码（响应报文头部）
+* 1xx 提供信息,表示已经接受，正在处理
+* 100 continue主要用于提供信息
+* 101 切换协议：如果服务器切换了协议会向客户端返回101
+* 2xx 成功
+* 200:ok
+* 201：已创建
+* 202：已接收
+* 203：非权威内容
+* 204：请求成功，但是无资源返回
+* 205：重置内容
+* 206：客户端进行了范围请求，服务器成功执行力这部分的请求，返回头部有Content-range指定了范围的实体内容
+* 3xx重定向
+* 300:用户请求了多个选项的资源
+* 301：永久转移，资源已经被分配了新的URL，应该按照location部分的url重新保存
+* 302：临时重定向
+* 303：该资源存在着另一个URL，可以使用GET方法获取
+* 304：没有修改（协商缓存命中时返回这个状态码）
+* 305：使用代理
+* 307：临时重定向
+* 308：永久重定向
+* 4xx客户端错误
+* 400:报文存在语法错误
+* 401：需要认证信息
+* 403：被服务器拒绝
+* 404：服务器上没有该资源
+* 405：服务器禁止使用该方法
+* 5xx服务端错误 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>客户端浏览器接收数据解析html,并请求代码中的资源</p>
+</li>
+<li><p>浏览器加载/渲染页面<br><a href="#%E9%A1%B5%E9%9D%A2%E7%94%9F%E6%88%90%E6%B8%B2%E6%9F%93%E7%9A%84%E8%BF%87%E7%A8%8B">页面生成渲染的过程</a></p>
+</li>
+<li><p>关闭连接（四次挥手）</p>
+</li>
+</ol>
+<h2 id="前端路由的两种模式：hash模式和-history模式"><a href="#前端路由的两种模式：hash模式和-history模式" class="headerlink" title="前端路由的两种模式：hash模式和 history模式"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/Charissa2017/article/details/104779412">前端路由的两种模式：hash模式和 history模式</a></h2><p>单页面应用利用了JavaScript动态变换网页内容，避免了页面重载；路由则提供了浏览器地址变化，网页内容也跟随变化，两者结合起来则为我们提供了体验良好的单页面web应用。</p>
+<ul>
+<li>hash模式：监听浏览器地址hash值变化，执行相应的js切换网页；</li>
+<li>history模式：利用history API实现url地址改变，网页内容改变；</li>
+</ul>
+<h2 id="页面生成渲染的过程"><a href="#页面生成渲染的过程" class="headerlink" title="页面生成渲染的过程"></a>页面生成渲染的过程</h2><ol>
+<li>HTML 被 HTML 解析器解析成 DOM 树；</li>
+<li>CSS  被 CSS 解析器解析成 CSSOM 树；</li>
+<li>结合 DOM 树和 CSSOM 树，生成一棵渲染树(Render Tree)，这一过程称为 Attachment；</li>
+<li>生成布局(flow)，浏览器在屏幕上“画”出渲染树中的所有节点；</li>
+<li>将布局绘制(paint)在屏幕上，显示出整个页面。<br>第四步和第五步是最耗时的部分，这两步合起来，就是我们通常所说的渲染。</li>
+</ol>
+<h2 id="浏览器缓存策略"><a href="#浏览器缓存策略" class="headerlink" title="浏览器缓存策略"></a><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903593275817998">浏览器缓存策略</a></h2><p>根据是否需要向服务器重新发起HTTP请求将缓存分为两个部分</p>
+<ul>
+<li><p>强制缓存</p>
+</li>
+<li><p>协商缓存</p>
+<h3 id="强制缓存"><a href="#强制缓存" class="headerlink" title="强制缓存"></a>强制缓存</h3><ul>
+<li><p>Expires和Cache-Control，其中Cache-Control优先级比Expires高。</p>
+</li>
+<li><p>到了HTTP/1.1，Expire已经被Cache-Control替代，原因在于Expires控制缓存的原理是使用客户端的时间与服务端返回的时间做对比，那么如果客户端与服务端的时间因为某些原因（例如时区不同；客户端和服务端有一方的时间不准确）发生误差，那么强制缓存则会直接失效，这样的话强制缓存的存在则毫无意义</p>
+</li>
+<li><p>在浏览器中，浏览器会在js和图片等文件解析执行后直接存入内存缓存中，那么当刷新页面时只需直接从内存缓存中读取(from memory cache)；而css文件则会存入硬盘文件中，所以每次渲染页面都需要从硬盘读取缓存(from disk cache)。</p>
+</li>
+</ul>
+<h3 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h3><ul>
+<li>协商缓存就是强制缓存失效后，浏览器携带缓存标识向服务器发起请求，由服务器根据缓存标识决定是否使用缓存的过程</li>
+<li>协商缓存生效，返回304</li>
+<li>协商缓存的标识也是在响应报文的HTTP头中和请求结果一起返回给浏览器的，控制协商缓存的字段分别有：Last-Modified / If-Modified-Since和Etag / If-None-Match，其中Etag / If-None-Match的优先级比Last-Modified / If-Modified-Since高</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>强制缓存优先于协商缓存进行，若强制缓存(Expires和Cache-Control)生效则直接使用缓存，若不生效则进行协商缓存(Last-Modified / If-Modified-Since和Etag / If-None-Match)，协商缓存由服务器决定是否使用缓存，若协商缓存失效，那么代表该请求的缓存失效，重新获取请求结果，再存入浏览器缓存中；生效则返回304，继续使用缓存</p>
+</blockquote>
+<h2 id="移动端适配，响应式布局的解决方案"><a href="#移动端适配，响应式布局的解决方案" class="headerlink" title="移动端适配，响应式布局的解决方案"></a><a target="_blank" rel="noopener" href="https://github.com/forthealllight/blog/issues/13">移动端适配，响应式布局的解决方案</a></h2><ol>
+<li>px和视口</li>
+<li>媒体查询</li>
+<li>百分比</li>
+<li>自适应场景下的rem解决方案</li>
+<li>通过vw/vh来实现自适应<h2 id="JS数据类型"><a href="#JS数据类型" class="headerlink" title="JS数据类型"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013592575/article/details/95087953">JS数据类型</a></h2>在ES5的时候，我们认知的数据类型确实是 6种：Number、String、Boolean、undefined、object、Null。<br>ES6 中新增了一种 Symbol 。这种类型的对象永不相等，即始创建的时候传入相同的值，可以解决属性名冲突的问题，做为标记。<br>谷歌67版本中还出现了一种 bigInt。是指安全存储、操作大整数。（但是很多人不把这个做为一个类型。</li>
+</ol>
+<ul>
+<li>基本类型（单类型）：除Object。 String、Number、boolean、null、undefined。</li>
+<li>引用类型：object,里面包含function、Array、Date</li>
+</ul>
+<h2 id="原型及原型链"><a href="#原型及原型链" class="headerlink" title="原型及原型链"></a><a target="_blank" rel="noopener" href="https://github.com/mqyqingfeng/Blog/issues/2">原型及原型链</a></h2><p>那什么是原型呢？你可以这样理解：每一个JavaScript对象(null除外)在创建的时候就会与之关联另一个对象，这个对象就是我们所说的原型，每一个对象都会从原型”继承”属性。</p>
+<p><img src="https://camo.githubusercontent.com/9a69b0f03116884e80cf566f8542cf014a4dd043fce6ce030d615040461f4e5a/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6d717971696e6766656e672f426c6f672f496d616765732f70726f746f74797065352e706e67" alt="关系图"><br>图中由相互关联的原型组成的链状结构就是原型链，也就是蓝色的这条线</p>
+<h2 id="作用域和作用域链"><a href="#作用域和作用域链" class="headerlink" title="作用域和作用域链"></a>作用域和作用域链</h2><blockquote>
+<p>作用域链:在《JavaScript深入之变量对象》中讲到，当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，就会从父级(词法层面上的父级)执行上下文的变量对象中查找，一直找到全局上下文的变量对象，也就是全局对象。这样由多个执行上下文的变量对象构成的链表就叫做作用域链。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mqyqingfeng/Blog/issues/6">JavaScript深入之作用域链</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/yueguanghaidao/article/details/9568071">Js作用域与作用域链详解</a></p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a><a target="_blank" rel="noopener" href="https://github.com/mqyqingfeng/Blog/issues/9">闭包</a></h2><p>MDN对闭包的定义：</p>
+<blockquote>
+<p>闭包是指那些能够访问自由变量的函数。<br>那什么是自由变量呢？<br>自由变量是指在函数中使用的，但既不是函数参数也不是函数的局部变量的变量。<br>由此，我们可以看出闭包共有两部分组成：<br>闭包 = 函数 + 函数能够访问的自由变量</p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>foo 函数可以访问变量 a，但是 a 既不是 foo 函数的局部变量，也不是 foo 函数的参数，所以 a 就是自由变量。</p>
+<h2 id="JS中继承实现的几种方式"><a href="#JS中继承实现的几种方式" class="headerlink" title="JS中继承实现的几种方式"></a>JS中继承实现的几种方式</h2><ol>
+<li>原型链继承，将父类的实例作为子类的原型，他的特点是实例是子类的实例也是父类的实例，父类新增的原型方法/属性，子类都能够访问，并且原型链继承简单易于实现，缺点是来自原型对象的所有属性被所有实例共享，无法实现多继承，无法向父类构造函数传参。</li>
+<li>构造继承，使用父类的构造函数来增强子类实例，即复制父类的实例属性给子类，<br>构造继承可以向父类传递参数，可以实现多继承，通过call多个父类对象。但是构造继承只能继承父类的实例属性和方法，不能继承原型属性和方法，无法实现函数服用，每个子类都有父类实例函数的副本，影响性能</li>
+<li>实例继承，为父类实例添加新特性，作为子类实例返回，实例继承的特点是不限制调用方法，不管是new 子类（）还是子类（）返回的对象具有相同的效果，缺点是实例是父类的实例，不是子类的实例，不支持多继承</li>
+<li>拷贝继承：特点：支持多继承，缺点：效率较低，内存占用高（因为要拷贝父类的属性）无法获取父类不可枚举的方法（不可枚举方法，不能使用for in 访问到）</li>
+<li>组合继承：通过调用父类构造，继承父类的属性并保留传参的优点，然后通过将父类实例作为子类原型，实现函数复用</li>
+<li>寄生组合继承：通过寄生方式，砍掉父类的实例属性，这样，在调用两次父类的构造的时候，就不会初始化两次实例方法/属性，避免的组合继承的缺点</li>
+</ol>
+<h2 id="typeof-amp-amp-instanceof"><a href="#typeof-amp-amp-instanceof" class="headerlink" title="typeof &amp;&amp; instanceof"></a><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903613584654344">typeof &amp;&amp; instanceof</a></h2><p>简单来说，我们使用 typeof 来判断基本数据类型是 ok 的，不过需要注意当用 typeof 来判断 null 类型时的问题，如果想要判断一个对象的具体类型可以考虑用 instanceof，但是 instanceof 也可能判断不准确，比如一个数组，他可以被 instanceof 判断为 Object。所以我们要想比较准确的判断对象实例的类型时，可以采取 Object.prototype.toString.call 方法。</p>
+<h2 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33058983">Event Loop</a></h2><p>javascript从诞生之日起就是一门单线程的非阻塞的脚本语言</p>
+<p>当javascript代码执行的时候会将不同的变量存于内存中的不同位置：堆（heap）和栈（stack）中来加以区分。其中，堆里存放着一些对象。而栈中则存放着一些基础类型变量以及对象的指针。 但是我们这里说的执行栈和上面这个栈的意义却有些不同</p>
+<p>我们调用一个方法的时候，js会生成一个与这个方法对应的执行环境（context），又叫执行上下文</p>
+<p>一个方法执行会向执行栈中加入这个方法的执行环境，js引擎遇到一个异步事件后并不会一直等待其返回结果，而是会将这个事件挂起，继续执行执行栈中的其他任务。当一个异步事件返回结果后，js会将这个事件加入与当前执行栈不同的另一个队列，我们称之为事件队列，被放入事件队列不会立刻执行其回调，而是等待当前执行栈中的所有任务都执行完毕</p>
+<p>异步任务之间并不相同，因此他们的执行优先级也有区别。不同的异步任务被分为两类：微任务（micro task）和宏任务（macro task）<br>以下事件属于宏任务：</p>
+<ul>
+<li>setInterval()</li>
+<li>setTimeout()</li>
+</ul>
+<p>以下事件属于微任务</p>
+<ul>
+<li>new Promise()</li>
+<li>new MutaionObserver()</li>
+</ul>
+<p>当前执行栈执行完毕时会立刻先处理所有微任务队列中的事件，然后再去宏任务队列中取出一个事件。同一次事件循环中，微任务永远在宏任务之前执行</p>
+<h2 id="Promise原理"><a href="#Promise原理" class="headerlink" title="Promise原理"></a>Promise原理</h2><p>Promise 必须为以下三种状态之一：等待态（Pending）、执行态（Fulfilled）和拒绝态（Rejected）。一旦Promise 被 resolve 或 reject，不能再迁移至其他任何状态（即状态 immutable）</p>
+<h2 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_36422236/article/details/88763187">BFC</a></h2><p>BFC(Block formatting context)直译为”块级格式化上下文”。它是一个独立的渲染区域，只有Block-level box参与， 它规定了内部的Block-level Box如何布局，并且与这个区域外部毫不相干</p>
+<p>BFC的布局规则</p>
+<ul>
+<li>内部的Box会在垂直方向，一个接一个地放置。</li>
+<li>Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠。</li>
+<li>每个盒子（块盒与行盒）的margin box的左边，与包含块border box的左边相接触(对于从左往右的*格式化，否则相反)。即使存在浮动也是如此。</li>
+<li>BFC的区域不会与float box重叠。</li>
+<li>BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。</li>
+<li>计算BFC的高度时，浮动元素也参与计算</li>
+</ul>
+<p>如何创建BFC</p>
+<ol>
+<li>overflow不为visible;</li>
+<li>float的值不为none；</li>
+<li>position的值不为static或relative；</li>
+<li>display属性为inline-blocks,table,table-cell,table-caption,flex,inline-flex;</li>
+</ol>
+<h2 id="伪元素和伪类"><a href="#伪元素和伪类" class="headerlink" title="伪元素和伪类"></a>伪元素和伪类</h2><p>伪类与伪元素之差别：<br>书写上：伪元素最大程度可使用双冒号，伪类使用但冒号；<br>运用上：每个选择器最多只能使用一个伪元素，每个选择器可以使用多个伪类；</p>
+<h2 id="CSS3新特性"><a href="#CSS3新特性" class="headerlink" title="CSS3新特性"></a><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000010780991">CSS3新特性</a></h2><ol>
+<li>过渡</li>
+<li>动画</li>
+<li>形状转化</li>
+<li>选择器</li>
+<li>阴影</li>
+<li>边框图片</li>
+<li>背景的三个属性</li>
+<li>反射</li>
+<li>文字</li>
+<li>颜色</li>
+<li>渐变</li>
+<li>滤镜Filter</li>
+<li>弹性布局</li>
+<li>栅格布局</li>
+<li>多列布局</li>
+<li>盒模型定义</li>
+<li>媒体查询</li>
+<li>混合模式</li>
+</ol>
+<h2 id="重排-reflow-和重绘-repaint"><a href="#重排-reflow-和重绘-repaint" class="headerlink" title="重排(reflow)和重绘(repaint)"></a><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904083212468238">重排(reflow)和重绘(repaint)</a></h2><h3 id="重排"><a href="#重排" class="headerlink" title="重排"></a>重排</h3><p>当DOM的变化影响了元素的几何信息(元素的的位置和尺寸大小)，浏览器需要重新计算元素的几何属性，将其安放在界面中的正确位置，这个过程叫做重排。</p>
+<p>重排也叫回流，简单的说就是重新生成布局，重新排列元素</p>
+<h4 id="下面情况会发生重排："><a href="#下面情况会发生重排：" class="headerlink" title="下面情况会发生重排："></a>下面情况会发生重排：</h4><ul>
+<li>页面初始渲染，这是开销最大的一次重排</li>
+<li>添加/删除可见的DOM元素</li>
+<li>改变元素位置</li>
+<li>改变元素尺寸，比如边距、填充、边框、宽度和高度等</li>
+<li>改变元素内容，比如文字数量，图片大小等</li>
+<li>改变元素字体大小</li>
+<li>改变浏览器窗口尺寸，比如resize事件发生时</li>
+<li>激活CSS伪类（例如：:hover）</li>
+<li>设置 style 属性的值，因为通过设置style属性改变结点样式的话，每一次设置都会触发一次reflow</li>
+<li>查询某些属性或调用某些计算方法：offsetWidth、offsetHeight等，除此之外，当我们调用 getComputedStyle方法，或者IE里的 currentStyle 时，也会触发重排，原理是一样的，都为求一个“即时性”和“准确性”。<h3 id="重绘"><a href="#重绘" class="headerlink" title="重绘"></a>重绘</h3>当一个元素的外观发生改变，但没有改变布局,重新把元素外观绘制出来的过程，叫做重绘。</li>
+</ul>
+<h2 id="首屏白屏时间的优化"><a href="#首屏白屏时间的优化" class="headerlink" title="首屏白屏时间的优化"></a>首屏白屏时间的优化</h2><h3 id="白屏过程"><a href="#白屏过程" class="headerlink" title="白屏过程"></a>白屏过程</h3><ol>
+<li>DNS Lookup 即浏览器从DNS服务器中进行域名查询。</li>
+<li>建立TCP请求连接</li>
+<li>服务端请求处理响应</li>
+<li>客户端下载、解析、渲染显示页面</li>
+</ol>
+<blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1508941">https://cloud.tencent.com/developer/article/1508941</a></p>
+</blockquote>
+<h2 id="前端优化"><a href="#前端优化" class="headerlink" title="前端优化"></a>前端优化</h2><ul>
+<li>降低请求量：合并资源，减少HTTP 请求数，minify / gzip 压缩，webP，lazyLoad。</li>
+<li>加快请求速度：预解析DNS，减少域名数，并行加载，CDN 分发。</li>
+<li>缓存：HTTP 协议缓存请求，离线缓存 manifest，离线数据缓存localStorage。</li>
+<li>渲染：JS/CSS优化，加载顺序，服务端渲染，pipeline。</li>
+<li><a href="#%E9%A6%96%E5%B1%8F%E7%99%BD%E5%B1%8F%E6%97%B6%E9%97%B4%E7%9A%84%E4%BC%98%E5%8C%96">首屏白屏时间的优化</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43883485/article/details/103504171">CSS性能优化</a><h2 id="webpack详解"><a href="#webpack详解" class="headerlink" title="webpack详解"></a>webpack详解</h2></li>
+</ul>
+<blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://bobi.ink/2019/10/01/babel/">https://bobi.ink/2019/10/01/babel/</a></p>
+</blockquote>
+<blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903789804126222">https://juejin.cn/post/6844903789804126222</a></p>
+</blockquote>
+<blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://github.com/youngwind/blog/issues/101">https://github.com/youngwind/blog/issues/101</a></p>
+</blockquote>
+<h2 id="Babel详解"><a href="#Babel详解" class="headerlink" title="Babel详解"></a>Babel详解</h2><blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://bobi.ink/2019/10/01/babel/">https://bobi.ink/2019/10/01/babel/</a></p>
+</blockquote>
+<h2 id="react的基本原理"><a href="#react的基本原理" class="headerlink" title="react的基本原理"></a>react的基本原理</h2><h2 id="react如何做性能优化"><a href="#react如何做性能优化" class="headerlink" title="react如何做性能优化"></a>react如何做性能优化</h2><ol>
+<li>避免内存泄露 setTimout()、addEventListener()及时销毁</li>
+<li>懒加载、异步组件</li>
+</ol>
+<h2 id="react-最新版本解决了什么问题-加了哪些东西"><a href="#react-最新版本解决了什么问题-加了哪些东西" class="headerlink" title="react 最新版本解决了什么问题 加了哪些东西"></a><a target="_blank" rel="noopener" href="https://github.com/lgwebdream/FE-Interview/issues/13">react 最新版本解决了什么问题 加了哪些东西</a></h2><h2 id="redux的重点概念"><a href="#redux的重点概念" class="headerlink" title="redux的重点概念"></a>redux的重点概念</h2><h2 id="react生命周期-15、16进行对比-16为什么废弃"><a href="#react生命周期-15、16进行对比-16为什么废弃" class="headerlink" title="react生命周期 15、16进行对比 16为什么废弃"></a>react生命周期 15、16进行对比 16为什么废弃</h2><h2 id="hooks如何处理生命周期"><a href="#hooks如何处理生命周期" class="headerlink" title="hooks如何处理生命周期"></a>hooks如何处理生命周期</h2><h2 id="interface-和-type-的区别"><a href="#interface-和-type-的区别" class="headerlink" title="interface 和 type 的区别"></a>interface 和 type 的区别</h2><h2 id="class-组件与函数式组件的区别"><a href="#class-组件与函数式组件的区别" class="headerlink" title="class 组件与函数式组件的区别"></a>class 组件与函数式组件的区别</h2><p>本文链接： <a href="http://www.vizong.cn/4/">http://www.vizong.cn/4/</a> </p>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持Metoo</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/wx.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/zfb.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/3/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/5/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+<!-- Gitalk评论插件通用代码 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+<script>
+const gitalk = new Gitalk({
+  clientID: '0a46e8f5cc23d5c9cceb',
+  clientSecret: '58178a18d68b1b93b3fec0f35ed016baeb89a03d',
+  repo: 'blog-comment',
+  owner: 'vivizong',
+  // 在这里设置一下截取前50个字符串, 这是因为 github 对 label 的长度有了要求, 如果超过
+  // 50个字符串则会报错.
+  // id: location.pathname.split('/').pop().substring(0, 49),
+  id: md5(location.pathname),
+  admin: ['vivizong'],
+  // facebook-like distraction free mode
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
+<!-- Gitalk代码结束 -->
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+      console.log('js加载成功')
+    });
+    loadScript('/js/changeTitle.js?2232', function() {
+      // load success
+      console.log('js加载成功')
+    });
+  }
+</script>
+
+</body>
+</html>

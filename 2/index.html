@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+
+  <html class="dark page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Markdown语法 | 感叹号！</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript,React,iOS" />
+  
+
+  <meta name="description" content="一、标题 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ######六级标题  一级标题 二级标题 三级标题 四级标题 五级标题 ######六级标题  二、字体 **加粗文字** *倾斜文字* ***斜体加粗文字*** ~~加删除线文字~~ &#96;红色&#96;  加粗文字 倾斜文字 斜体加粗文字 加删除线文字   红色  三、引用 &gt;引用内容1 &gt;&gt;引用内容2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown语法">
+<meta property="og:url" content="http://www.vizong.cn/2/index.html">
+<meta property="og:site_name" content="感叹号！">
+<meta property="og:description" content="一、标题 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ######六级标题  一级标题 二级标题 三级标题 四级标题 五级标题 ######六级标题  二、字体 **加粗文字** *倾斜文字* ***斜体加粗文字*** ~~加删除线文字~~ &#96;红色&#96;  加粗文字 倾斜文字 斜体加粗文字 加删除线文字   红色  三、引用 &gt;引用内容1 &gt;&gt;引用内容2">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-04T06:43:02.000Z">
+<meta property="article:modified_time" content="2022-01-21T06:04:06.332Z">
+<meta property="article:author" content="Metoo">
+<meta property="article:tag" content="前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript,React,iOS">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?781972f98f874b46f6e07630bf89e654";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+  <!-- <script src="https://cdn.jsdelivr.net/gh/vivizong/vivizong.github.io/js/changeTitle.js"></script> -->
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="感叹号！" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">导航</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">导航</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%A0%87%E9%A2%98"><span class="toc-text">一、标题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-text">一级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-text">二级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-text">三级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-text">四级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%94%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-text">五级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AD%97%E4%BD%93"><span class="toc-text">二、字体</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%BC%95%E7%94%A8"><span class="toc-text">三、引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%88%97%E8%A1%A8"><span class="toc-text">四、列表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-text">五、分割线</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%9B%BE%E7%89%87%E5%92%8C%E9%93%BE%E6%8E%A5"><span class="toc-text">六、图片和链接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%A1%A8%E6%A0%BC"><span class="toc-text">七、表格</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Markdown语法/Markdown语法" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Markdown语法</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2020.01.04</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Metoo</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/Markdown/">Markdown</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+######六级标题<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><p>######六级标题</p>
+<h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><pre class="line-numbers language-json" data-language="json"><code class="language-json">**加粗文字**
+*倾斜文字*
+***斜体加粗文字***
+~~加删除线文字~~
+&#96;红色&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>加粗文字</strong><br><em>倾斜文字</em><br><em><strong>斜体加粗文字</strong></em><br><del>加删除线文字</del> </p>
+<p><code>红色</code></p>
+<h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><pre class="line-numbers language-json" data-language="json"><code class="language-json">&gt;引用内容1
+&gt;&gt;引用内容2
+&gt;&gt;&gt;引用内容3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>引用内容1</p>
+<blockquote>
+<p>引用内容2</p>
+<blockquote>
+<p>引用内容3</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="四、列表"><a href="#四、列表" class="headerlink" title="四、列表"></a>四、列表</h1><pre class="line-numbers language-json" data-language="json"><code class="language-json">无序列表 -+* 都可以
+- 列表内容-
++ 列表内容+
+* 列表内容*
+有序列表 数字加点
+1. 列表内容
+2. 列表内容
+3. 列表内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>列表内容-</li>
+</ul>
+<ul>
+<li>列表内容+</li>
+</ul>
+<ul>
+<li>列表内容*</li>
+</ul>
+<ol>
+<li><p>列表内容</p>
+</li>
+<li><p>列表内容</p>
+</li>
+<li><p>列表内容</p>
+</li>
+</ol>
+<h1 id="五、分割线"><a href="#五、分割线" class="headerlink" title="五、分割线"></a>五、分割线</h1><pre class="line-numbers language-json" data-language="json"><code class="language-json">三个及以上都可以
+---
+----
+***
+*****<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<hr>
+<hr>
+<hr>
+<h1 id="六、图片和链接"><a href="#六、图片和链接" class="headerlink" title="六、图片和链接"></a>六、图片和链接</h1><pre class="line-numbers language-json" data-language="json"><code class="language-json">图片
+ 	![](链接地址)
+链接
+	[文字内容](链接地址)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="七、表格"><a href="#七、表格" class="headerlink" title="七、表格"></a>七、表格</h1><pre class="line-numbers language-json" data-language="json"><code class="language-json">| 默认格式  | 左对齐 | 居中 | 右对齐 |
+| --- | :--- | :---: | ---: |
+| 默认格式表格内容  | 左对齐表格内容 | 居中表格内容 | 右对齐表格内容 |
+| 默认格式表格内容  | 左对齐表格内容 | 居中表格内容 | 右对齐表格内容 |<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<table>
+<thead>
+<tr>
+<th>默认格式</th>
+<th align="left">左对齐</th>
+<th align="center">居中</th>
+<th align="right">右对齐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>默认格式表格内容</td>
+<td align="left">左对齐表格内容</td>
+<td align="center">居中表格内容</td>
+<td align="right">右对齐表格内容</td>
+</tr>
+<tr>
+<td>默认格式表格内容</td>
+<td align="left">左对齐表格内容</td>
+<td align="center">居中表格内容</td>
+<td align="right">右对齐表格内容</td>
+</tr>
+</tbody></table>
+<p>本文链接： <a href="http://www.vizong.cn/2/">http://www.vizong.cn/2/</a> </p>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持Metoo</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/wx.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/zfb.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/1/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/3/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+<!-- Gitalk评论插件通用代码 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+<script>
+const gitalk = new Gitalk({
+  clientID: '0a46e8f5cc23d5c9cceb',
+  clientSecret: '58178a18d68b1b93b3fec0f35ed016baeb89a03d',
+  repo: 'blog-comment',
+  owner: 'vivizong',
+  // 在这里设置一下截取前50个字符串, 这是因为 github 对 label 的长度有了要求, 如果超过
+  // 50个字符串则会报错.
+  // id: location.pathname.split('/').pop().substring(0, 49),
+  id: md5(location.pathname),
+  admin: ['vivizong'],
+  // facebook-like distraction free mode
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
+<!-- Gitalk代码结束 -->
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+      console.log('js加载成功')
+    });
+    loadScript('/js/changeTitle.js?2232', function() {
+      // load success
+      console.log('js加载成功')
+    });
+  }
+</script>
+
+</body>
+</html>

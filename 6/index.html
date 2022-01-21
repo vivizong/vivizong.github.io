@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+
+
+  <html class="dark page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>知识点汇总二 | 感叹号！</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript,React,iOS" />
+  
+
+  <meta name="description" content="创建对象的几种方法 &#x2F;&#x2F; 第一种方式：字面量 var o1 &#x3D; {name:&#39;o1&#39;} var o2 &#x3D; new Object({name:&#39;o2&#39;}) &#x2F;&#x2F; 第二种方式：通过构造函数 var M &#x3D; function(name){this.name&#x3D;name}; var o3 &#x3D; new M(&#39;o3&#39;); &#x2F;&#x2F; 第三种方式：Object.create var p &#x3D; {name:&#39;p&#39;}; va">
+<meta property="og:type" content="article">
+<meta property="og:title" content="知识点汇总二">
+<meta property="og:url" content="http://www.vizong.cn/6/index.html">
+<meta property="og:site_name" content="感叹号！">
+<meta property="og:description" content="创建对象的几种方法 &#x2F;&#x2F; 第一种方式：字面量 var o1 &#x3D; {name:&#39;o1&#39;} var o2 &#x3D; new Object({name:&#39;o2&#39;}) &#x2F;&#x2F; 第二种方式：通过构造函数 var M &#x3D; function(name){this.name&#x3D;name}; var o3 &#x3D; new M(&#39;o3&#39;); &#x2F;&#x2F; 第三种方式：Object.create var p &#x3D; {name:&#39;p&#39;}; va">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.vizong.cn/6/WX20220118-151049@2x.png">
+<meta property="og:image" content="http://www.vizong.cn/Users/weichengzong/My/文档目录/WX20220118-151049@2x.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/9a69b0f03116884e80cf566f8542cf014a4dd043fce6ce030d615040461f4e5a/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6d717971696e6766656e672f426c6f672f496d616765732f70726f746f74797065352e706e67">
+<meta property="og:image" content="http://www.vizong.cn/6/WX20220118-152742@2x.png">
+<meta property="og:image" content="http://www.vizong.cn/Users/weichengzong/My/文档目录/WX20220118-152742@2x.png">
+<meta property="og:image" content="http://www.vizong.cn/6/WX20220119-163009@2x.png">
+<meta property="og:image" content="http://www.vizong.cn/Users/weichengzong/My/文档目录/前端知识点/WX20220119-163009@2x.png">
+<meta property="article:published_time" content="2022-01-19T08:39:17.000Z">
+<meta property="article:modified_time" content="2022-01-21T06:04:06.332Z">
+<meta property="article:author" content="Metoo">
+<meta property="article:tag" content="前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript,React,iOS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.vizong.cn/6/WX20220118-151049@2x.png">
+
+  
+
+  
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?781972f98f874b46f6e07630bf89e654";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+  <!-- <script src="https://cdn.jsdelivr.net/gh/vivizong/vivizong.github.io/js/changeTitle.js"></script> -->
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="感叹号！" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">导航</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">导航</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-text">创建对象的几种方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E3%80%81%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E3%80%81%E5%AE%9E%E4%BE%8B%E3%80%81%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-text">原型、构造函数、实例、原型链</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#instanceof%E5%8E%9F%E7%90%86"><span class="toc-text">instanceof原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">new运算符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%B1%BB"><span class="toc-text">面向对象类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="toc-text">类的声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%E5%8C%96"><span class="toc-text">实例化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E7%BB%A7%E6%89%BF"><span class="toc-text">1. 构造函数实现继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF"><span class="toc-text">2. 原型链继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BB%84%E5%90%88%E6%96%B9%E5%BC%8F%E7%BB%A7%E6%89%BF"><span class="toc-text">3. 组合方式继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%BB%84%E5%90%88%E7%BB%A7%E6%89%BF%E7%9A%84%E4%BC%98%E5%8C%96"><span class="toc-text">4. 组合继承的优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%BB%84%E5%90%88%E7%BB%A7%E6%89%BF%E4%BC%98%E5%8C%962"><span class="toc-text">5.组合继承优化2</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E7%B1%BB"><span class="toc-text">通信类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E5%8F%8A%E9%99%90%E5%88%B6"><span class="toc-text">什么是同源策略及限制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%90%8E%E7%AB%AF%E5%A6%82%E4%BD%95%E9%80%9A%E4%BF%A1"><span class="toc-text">前后端如何通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BAAjax"><span class="toc-text">如何创建Ajax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%A8%E5%9F%9F%E9%80%9A%E4%BF%A1%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-text">跨域通信的几种方式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E7%B1%BB"><span class="toc-text">安全类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSRF"><span class="toc-text">CSRF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XSS"><span class="toc-text">XSS</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E6%9C%BA%E5%88%B6"><span class="toc-text">渲染机制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFDOCTYPE%E5%8F%8A%E4%BD%9C%E7%94%A8"><span class="toc-text">什么是DOCTYPE及作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B"><span class="toc-text">浏览器的渲染过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E6%8E%92-reflow-%E5%92%8C%E9%87%8D%E7%BB%98-repaint"><span class="toc-text">重排(reflow)和重绘(repaint)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E6%8E%92"><span class="toc-text">重排</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A6%E5%8F%91Reflow"><span class="toc-text">触发Reflow</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E7%BB%98"><span class="toc-text">重绘</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A6%E5%8F%91Repaint"><span class="toc-text">触发Repaint</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%8F%E5%B0%91reflow%E3%80%81repaint%E8%A7%A6%E5%8F%91%E6%AC%A1%E6%95%B0"><span class="toc-text">减少reflow、repaint触发次数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6"><span class="toc-text">JS运行机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Event-Loop"><span class="toc-text">Event Loop</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-text">页面性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD"><span class="toc-text">异步加载</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD%E6%96%B9%E5%BC%8F"><span class="toc-text">异步加载方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">异步加载的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E7%BC%93%E5%AD%98"><span class="toc-text">浏览器的缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98"><span class="toc-text">强制缓存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98"><span class="toc-text">协商缓存</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E7%9B%91%E6%8E%A7"><span class="toc-text">错误监控</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B3%E6%97%B6%E8%BF%90%E8%A1%8C%E9%94%99%E8%AF%AF%E7%9A%84%E6%8D%95%E8%8E%B7%E6%96%B9%E5%BC%8F"><span class="toc-text">即时运行错误的捕获方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%BA%90%E5%8A%A0%E8%BD%BD%E9%94%99%E8%AF%AF"><span class="toc-text">资源加载错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%B6%E4%BC%B8%EF%BC%9A%E8%B7%A8%E5%9F%9F%E7%9A%84js%E8%BF%90%E8%A1%8C%E9%94%99%E8%AF%AF%E5%8F%AF%E4%BB%A5%E6%8D%95%E8%8E%B7%E5%90%97%EF%BC%8C%E9%94%99%E8%AF%AF%E6%8F%90%E7%A4%BA%E4%BB%80%E4%B9%88%EF%BC%8C%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86"><span class="toc-text">延伸：跨域的js运行错误可以捕获吗，错误提示什么，应该怎么处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E6%8A%A5%E9%94%99%E8%AF%AF%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-text">上报错误的基本原理</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-知识点汇总二/知识点汇总二" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">知识点汇总二</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2022.01.19</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Metoo</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> / <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/%E9%9D%A2%E8%AF%95/">面试</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="创建对象的几种方法"><a href="#创建对象的几种方法" class="headerlink" title="创建对象的几种方法"></a>创建对象的几种方法</h1><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 第一种方式：字面量</span>
+<span class="token keyword">var</span> o1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'o1'</span><span class="token punctuation">&#125;</span>
+<span class="token keyword">var</span> o2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'o2'</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token comment">// 第二种方式：通过构造函数</span>
+<span class="token keyword">var</span> <span class="token function-variable function">M</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token operator">=</span>name<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> o3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">M</span><span class="token punctuation">(</span><span class="token string">'o3'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 第三种方式：Object.create</span>
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">name</span><span class="token operator">:</span><span class="token string">'p'</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> o4 <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="原型、构造函数、实例、原型链"><a href="#原型、构造函数、实例、原型链" class="headerlink" title="原型、构造函数、实例、原型链"></a>原型、构造函数、实例、原型链</h1><p><img src="./WX20220118-151049@2x.png"></p>
+<!-- <img src="/Users/weichengzong/My/文档目录/WX20220118-151049@2x.png" style="zoom:50%;" /> -->
+
+<p>完整图</p>
+<p><img src="https://camo.githubusercontent.com/9a69b0f03116884e80cf566f8542cf014a4dd043fce6ce030d615040461f4e5a/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6d717971696e6766656e672f426c6f672f496d616765732f70726f746f74797065352e706e67" alt="关系图"></p>
+<h1 id="instanceof原理"><a href="#instanceof原理" class="headerlink" title="instanceof原理"></a>instanceof原理</h1><p><code>instanceof</code> 运算符用于测试构造函数的 <code>prototype</code> 属性是否出现在对象原型链中的任何位置</p>
+<p>如果<code>A instanceof B</code>，那么 <code>A</code> 必须是一个对象，而 <code>B</code> 必须是一个合法的 JavaScript 函数。在这两个条件都满足的情况下：</p>
+<p>判断 B 的 prototype 属性指向的原型对象(B.prototype)是否在对象 A 的原型链上。</p>
+<p>如果在，则为 true；如果不在，则为 false。</p>
+<p><img src="./WX20220118-152742@2x.png"></p>
+<!-- <img src="/Users/weichengzong/My/文档目录/WX20220118-152742@2x.png" style="zoom:50%;" /> -->
+
+<h1 id="new运算符"><a href="#new运算符" class="headerlink" title="new运算符"></a>new运算符</h1><ol>
+<li>一个新对象被创建。它继承自foo.prototype</li>
+<li>构造函数foo被执行。执行的时候，相应的传参会被传入，同时上下文（this）会被指定为新的实例。new foo等同于new foo(),只能用在不传递任何参数的情况</li>
+<li>如果构造函数返回了一个对象，那么这个对象会取代整个new出来的结果。如果构造函数没有返回对象，那么new出来的结果为步骤1创建的对象</li>
+</ol>
+<h1 id="面向对象类"><a href="#面向对象类" class="headerlink" title="面向对象类"></a>面向对象类</h1><h2 id="类的声明"><a href="#类的声明" class="headerlink" title="类的声明"></a>类的声明</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 类的声明</span>
+<span class="token keyword">function</span> <span class="token function">Animal</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'name'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">// ES6中的class声明</span>
+<span class="token keyword">class</span> <span class="token class-name">Animal2</span><span class="token punctuation">&#123;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="实例化"><a href="#实例化" class="headerlink" title="实例化"></a>实例化</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">new</span> <span class="token class-name">Animal2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h3 id="1-构造函数实现继承"><a href="#1-构造函数实现继承" class="headerlink" title="1. 构造函数实现继承"></a>1. 构造函数实现继承</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Parent1</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'parent'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function">Child1</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token function">Parent1</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//apply 改变运行上下文</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> <span class="token string">'child1'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+缺点：无法继承原型中的属性方法<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-原型链继承"><a href="#2-原型链继承" class="headerlink" title="2. 原型链继承"></a>2. 原型链继承</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Parent2</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'parent2'</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>play <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function">Child2</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Child2'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token class-name">Child2</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Parent2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Child2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__proto__<span class="token punctuation">)</span>
+<span class="token keyword">var</span> s1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> s2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s1<span class="token punctuation">.</span>play<span class="token punctuation">,</span>s2<span class="token punctuation">.</span>play<span class="token punctuation">)</span><span class="token punctuation">;</span>
+s1<span class="token punctuation">.</span>play<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+缺点：共用一个原型<span class="token punctuation">,</span>Child2的实例对象修改原型属性值，其他的实例对象的值会被修改<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-组合方式继承"><a href="#3-组合方式继承" class="headerlink" title="3. 组合方式继承"></a>3. 组合方式继承</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Parent3</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'parent3'</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>play <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function">Child3</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token function">Parent1</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Child3'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token class-name">Child3</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Parent3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> s3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> s4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+s3<span class="token punctuation">.</span>play<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s3<span class="token punctuation">.</span>play<span class="token punctuation">,</span>s4<span class="token punctuation">.</span>play<span class="token punctuation">)</span><span class="token punctuation">;</span>
+缺点：父级的构造函数执行两次<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-组合继承的优化"><a href="#4-组合继承的优化" class="headerlink" title="4. 组合继承的优化"></a>4. 组合继承的优化</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Parent4</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'parent4'</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>play <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function">Child4</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token function">Parent1</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Child4'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token class-name">Child4</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token class-name">Parent4</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+<span class="token keyword">var</span> s5 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child4</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> s6 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child4</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s5<span class="token punctuation">.</span>constructor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+缺点：console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s5 <span class="token keyword">instanceof</span> <span class="token class-name">Child4</span><span class="token punctuation">,</span>s5 <span class="token keyword">instanceof</span> <span class="token class-name">Parent4</span><span class="token punctuation">)</span>都为<span class="token boolean">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-组合继承优化2"><a href="#5-组合继承优化2" class="headerlink" title="5.组合继承优化2"></a>5.组合继承优化2</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Parent5</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'parent5'</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>play <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function">Child5</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token function">Parent1</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Child5'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token class-name">Child5</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token class-name">Parent5</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//__proto__</span>
+<span class="token class-name">Child5</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> Child5<span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> s7 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child5</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s7 <span class="token keyword">instanceof</span> <span class="token class-name">Child5</span><span class="token punctuation">,</span> s7 <span class="token keyword">instanceof</span> <span class="token class-name">Parent5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s7<span class="token punctuation">.</span>constructor<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="通信类"><a href="#通信类" class="headerlink" title="通信类"></a>通信类</h1><h2 id="什么是同源策略及限制"><a href="#什么是同源策略及限制" class="headerlink" title="什么是同源策略及限制"></a>什么是同源策略及限制</h2><p>同源策略限制从一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于格力潜在恶意文件的关键的安全机制。</p>
+<p>同源： 协议、域名、端口</p>
+<h2 id="前后端如何通信"><a href="#前后端如何通信" class="headerlink" title="前后端如何通信"></a>前后端如何通信</h2><ol>
+<li>Ajax 同源</li>
+<li>WebSocket </li>
+<li>CORS </li>
+</ol>
+<h2 id="如何创建Ajax"><a href="#如何创建Ajax" class="headerlink" title="如何创建Ajax"></a>如何创建Ajax</h2><ul>
+<li>XMLHttpRequest对象的工作流程</li>
+<li>兼容性处理</li>
+<li>事件的触发条件</li>
+<li>事件的触发顺序</li>
+</ul>
+<h2 id="跨域通信的几种方式"><a href="#跨域通信的几种方式" class="headerlink" title="跨域通信的几种方式"></a>跨域通信的几种方式</h2><ol>
+<li>JSONP</li>
+<li>Hash</li>
+<li>postMessage</li>
+<li>WebSocket</li>
+<li>CORS</li>
+</ol>
+<h1 id="安全类"><a href="#安全类" class="headerlink" title="安全类"></a>安全类</h1><h2 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h2><p>跨站请求伪造 未经用户许可，偷偷的使用用户名义，发送恶意请求的攻击。通常情况下借助用户cookie来骗取服务器信任。</p>
+<p>CSRF（通常）发生在第三方域名。 CSRF攻击者（通常）不能获取到Cookie等信息，只是使用。</p>
+<p>防御</p>
+<ul>
+<li>Token验证</li>
+<li>Referer验证</li>
+<li>隐藏令牌</li>
+</ul>
+<h2 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h2><p>跨站脚本攻击：XSS本质是Html注入，攻击者在网站上注入恶意的js代码，对客户端页面进行篡改，进而窃取隐私数据比如cookie、session，或者重定向到不好的网站等。</p>
+<h1 id="渲染机制"><a href="#渲染机制" class="headerlink" title="渲染机制"></a>渲染机制</h1><h2 id="什么是DOCTYPE及作用"><a href="#什么是DOCTYPE及作用" class="headerlink" title="什么是DOCTYPE及作用"></a>什么是DOCTYPE及作用</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这行代码是一个声明， 其作用是告诉浏览器按照哪一种HTML文档规范解析HTML文档。</p>
+<!DOCTYPEhtml><p>为HTML 5的声明。一般情况下我们新写的前端工程就用这个声明就可以，否则一些新的标准特性是不能用的，比如说canvas标签。不去声明doctype也是不可取的。不同浏览器对这种情况有不同的默认规范，并不一致，所以，一定要声明好doctype，要注意一定加上感叹号。</p>
+<p>严格模式和混杂模式</p>
+<h2 id="浏览器的渲染过程"><a href="#浏览器的渲染过程" class="headerlink" title="浏览器的渲染过程"></a>浏览器的渲染过程</h2><ol>
+<li><p>HTML 被 HTML 解析器解析成 DOM 树；</p>
+</li>
+<li><p>CSS  被 CSS 解析器解析成 CSSOM 树；</p>
+</li>
+<li><p>结合 DOM 树和 CSSOM 树，生成一棵渲染树(Render Tree)，这一过程称为 Attachment；</p>
+</li>
+<li><p>生成布局Layout(flow)，浏览器在屏幕上“画”出渲染树中的所有节点；</p>
+</li>
+<li><p>将布局绘制(paint)在屏幕上，显示出整个页面。</p>
+</li>
+</ol>
+<p>第四步和第五步是最耗时的部分，这两步合起来，就是我们通常所说的渲染。</p>
+<h2 id="重排-reflow-和重绘-repaint"><a href="#重排-reflow-和重绘-repaint" class="headerlink" title="重排(reflow)和重绘(repaint)"></a><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904083212468238">重排(reflow)和重绘(repaint)</a></h2><h3 id="重排"><a href="#重排" class="headerlink" title="重排"></a>重排</h3><p>当DOM的变化影响了元素的几何信息(元素的的位置和尺寸大小)，浏览器需要重新计算元素的几何属性，将其安放在界面中的正确位置，这个过程叫做重排。</p>
+<p>重排也叫回流，简单的说就是重新生成布局，重新排列元素</p>
+<h4 id="触发Reflow"><a href="#触发Reflow" class="headerlink" title="触发Reflow"></a>触发Reflow</h4><ul>
+<li><p>页面初始渲染，这是开销最大的一次重排</p>
+</li>
+<li><p>添加/删除可见的DOM元素</p>
+</li>
+<li><p>改变元素位置</p>
+</li>
+<li><p>改变元素尺寸，比如边距、填充、边框、宽度和高度等</p>
+</li>
+<li><p>改变元素内容，比如文字数量，图片大小等</p>
+</li>
+<li><p>改变元素字体大小</p>
+</li>
+<li><p>改变浏览器窗口尺寸，比如resize事件发生时</p>
+</li>
+<li><p>激活CSS伪类（例如：:hover）</p>
+</li>
+<li><p>设置 style 属性的值，因为通过设置style属性改变结点样式的话，每一次设置都会触发一次reflow</p>
+</li>
+<li><p>查询某些属性或调用某些计算方法：offsetWidth、offsetHeight等，除此之外，当我们调用 getComputedStyle方法，或者IE里的 currentStyle 时，也会触发重排，原理是一样的，都为求一个“即时性”和“准确性”。</p>
+</li>
+</ul>
+<h3 id="重绘"><a href="#重绘" class="headerlink" title="重绘"></a>重绘</h3><p>当我们改变某个元素的背景色、文字颜色、边框颜色等等不影响它周围或内部布局的属性时，屏幕的一部分要重画，但是元素的几何尺寸和位置没有发生改变</p>
+<h4 id="触发Repaint"><a href="#触发Repaint" class="headerlink" title="触发Repaint"></a>触发Repaint</h4><p><code>reflow</code>回流必定引起<code>repaint</code>重绘，重绘可以单独触发。<br>背景色、颜色、字体改变（注意：字体大小发生变化时，会触发回流）</p>
+<h3 id="减少reflow、repaint触发次数"><a href="#减少reflow、repaint触发次数" class="headerlink" title="减少reflow、repaint触发次数"></a>减少reflow、repaint触发次数</h3><ul>
+<li><p>用<code>transform</code>做形变和位移可以减少<code>reflow</code></p>
+</li>
+<li><p>避免逐个修改节点样式，尽量一次性修改</p>
+</li>
+<li><p>使用<code>DocumentFragment</code>将需要多次修改的DOM元素缓存，最后一次性<code>append</code>到真实DOM中渲染</p>
+</li>
+<li><p>可以将需要多次修改的DOM元素设置<code>display:none</code>，操作完再显示。（因为隐藏元素不在<code>render</code>树内，因此修改隐藏元素不会触发回流重绘）</p>
+</li>
+<li><p>避免多次读取某些属性</p>
+</li>
+<li><p>通过绝对位移将复杂的节点元素脱离文档流，形成新的Render Layer，降低回流成本</p>
+</li>
+</ul>
+<h1 id="JS运行机制"><a href="#JS运行机制" class="headerlink" title="JS运行机制"></a>JS运行机制</h1><h3 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33058983">Event Loop</a></h3><p>javascript从诞生之日起就是一门单线程的非阻塞的脚本语言</p>
+<p>当javascript代码执行的时候会将不同的变量存于内存中的不同位置：堆（heap）和栈（stack）中来加以区分。其中，堆里存放着一些对象。而栈中则存放着一些基础类型变量以及对象的指针。 但是我们这里说的执行栈和上面这个栈的意义却有些不同</p>
+<p>我们调用一个方法的时候，js会生成一个与这个方法对应的执行环境（context），又叫执行上下文</p>
+<p>一个方法执行会向执行栈中加入这个方法的执行环境，js引擎遇到一个异步事件后并不会一直等待其返回结果，而是会将这个事件挂起，继续执行执行栈中的其他任务。当一个异步事件返回结果后，js会将这个事件加入与当前执行栈不同的另一个队列，我们称之为事件队列，被放入事件队列不会立刻执行其回调，而是等待当前执行栈中的所有任务都执行完毕</p>
+<p>异步任务之间并不相同，因此他们的执行优先级也有区别。不同的异步任务被分为两类：微任务（micro task）和宏任务（macro task）</p>
+<p>以下事件属于宏任务：</p>
+<ul>
+<li><p>setInterval()</p>
+</li>
+<li><p>setTimeout()</p>
+</li>
+</ul>
+<p>以下事件属于微任务</p>
+<ul>
+<li><p>new Promise()</p>
+</li>
+<li><p>new MutaionObserver()</p>
+</li>
+</ul>
+<p>当前执行栈执行完毕时会立刻先处理所有微任务队列中的事件，然后再去宏任务队列中取出一个事件。同一次事件循环中，微任务永远在宏任务之前执行</p>
+<h1 id="页面性能优化"><a href="#页面性能优化" class="headerlink" title="页面性能优化"></a>页面性能优化</h1><ol>
+<li>资源压缩合并，减少HTTP请求</li>
+<li>非核心代码的异步加载</li>
+<li>利用浏览器缓存</li>
+<li>使用CDN</li>
+<li>预解析DNS</li>
+</ol>
+<p>预解析的实现：</p>
+<ol>
+<li>用meta信息来告知浏览器, 当前页面要做DNS预解析:<meta http-equiv="x-dns-prefetch-control" content="on" /></li>
+<li>在页面header中使用link标签来强制对DNS预解析: <link rel="dns-prefetch" href="http://bdimg.share.baidu.com" /></li>
+</ol>
+<h2 id="异步加载"><a href="#异步加载" class="headerlink" title="异步加载"></a>异步加载</h2><h3 id="异步加载方式"><a href="#异步加载方式" class="headerlink" title="异步加载方式"></a>异步加载方式</h3><ol>
+<li>动态脚本加载</li>
+<li>defer</li>
+<li>async</li>
+</ol>
+<h3 id="异步加载的区别"><a href="#异步加载的区别" class="headerlink" title="异步加载的区别"></a>异步加载的区别</h3><ol>
+<li>defer是在HTML解析完之后会执行，如果是多个，按照加载的顺序依次执行</li>
+<li>async是在加载完之后立即执行，如果是多个，执行顺序和加载顺序无关</li>
+</ol>
+<h2 id="浏览器的缓存"><a href="#浏览器的缓存" class="headerlink" title="浏览器的缓存"></a>浏览器的缓存</h2><h3 id="强制缓存"><a href="#强制缓存" class="headerlink" title="强制缓存"></a>强制缓存</h3><ul>
+<li><p>Expires和Cache-Control，其中Cache-Control优先级比Expires高。</p>
+</li>
+<li><p>到了HTTP/1.1，Expire已经被Cache-Control替代，原因在于Expires控制缓存的原理是使用客户端的时间与服务端返回的时间做对比，那么如果客户端与服务端的时间因为某些原因（例如时区不同；客户端和服务端有一方的时间不准确）发生误差，那么强制缓存则会直接失效，这样的话强制缓存的存在则毫无意义</p>
+</li>
+<li><p>在浏览器中，浏览器会在js和图片等文件解析执行后直接存入内存缓存中，那么当刷新页面时只需直接从内存缓存中读取(from memory cache)；而css文件则会存入硬盘文件中，所以每次渲染页面都需要从硬盘读取缓存(from disk cache)。</p>
+</li>
+</ul>
+<h3 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h3><ul>
+<li><p>协商缓存就是强制缓存失效后，浏览器携带缓存标识向服务器发起请求，由服务器根据缓存标识决定是否使用缓存的过程</p>
+</li>
+<li><p>协商缓存生效，返回304</p>
+</li>
+<li><p>协商缓存的标识也是在响应报文的HTTP头中和请求结果一起返回给浏览器的，控制协商缓存的字段分别有：Last-Modified / If-Modified-Since和Etag / If-None-Match，其中Etag / If-None-Match的优先级比Last-Modified / If-Modified-Since高</p>
+</li>
+</ul>
+<blockquote>
+<p>强制缓存优先于协商缓存进行，若强制缓存(Expires和Cache-Control)生效则直接使用缓存，若不生效则进行协商缓存(Last-Modified / If-Modified-Since和Etag / If-None-Match)，协商缓存由服务器决定是否使用缓存，若协商缓存失效，那么代表该请求的缓存失效，重新获取请求结果，再存入浏览器缓存中；生效则返回304，继续使用缓存</p>
+</blockquote>
+<h1 id="错误监控"><a href="#错误监控" class="headerlink" title="错误监控"></a>错误监控</h1><h2 id="即时运行错误的捕获方式"><a href="#即时运行错误的捕获方式" class="headerlink" title="即时运行错误的捕获方式"></a>即时运行错误的捕获方式</h2><ol>
+<li>try.catch</li>
+<li>Window.onerror</li>
+</ol>
+<h2 id="资源加载错误"><a href="#资源加载错误" class="headerlink" title="资源加载错误"></a>资源加载错误</h2><ol>
+<li>Object.onerror</li>
+<li>Performance.getEntries()</li>
+<li>Error事件捕获</li>
+</ol>
+<h2 id="延伸：跨域的js运行错误可以捕获吗，错误提示什么，应该怎么处理"><a href="#延伸：跨域的js运行错误可以捕获吗，错误提示什么，应该怎么处理" class="headerlink" title="延伸：跨域的js运行错误可以捕获吗，错误提示什么，应该怎么处理"></a>延伸：跨域的js运行错误可以捕获吗，错误提示什么，应该怎么处理</h2><p><img src="./WX20220119-163009@2x.png"></p>
+<!-- <img src="/Users/weichengzong/My/文档目录/前端知识点/WX20220119-163009@2x.png" style="zoom:50%;" /> -->
+
+<ol>
+<li>在script标签增加crossorigin属性</li>
+<li>设置js资源响应头Access-Control-Allow-Origin:*</li>
+</ol>
+<h2 id="上报错误的基本原理"><a href="#上报错误的基本原理" class="headerlink" title="上报错误的基本原理"></a>上报错误的基本原理</h2><ol>
+<li>采用Ajax通信的方式上报</li>
+<li>利用Image对象上报</li>
+</ol>
+<p>本文链接： <a href="http://www.vizong.cn/6/">http://www.vizong.cn/6/</a> </p>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持Metoo</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/wx.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/zfb.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/5/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/7/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+<!-- Gitalk评论插件通用代码 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+<script>
+const gitalk = new Gitalk({
+  clientID: '0a46e8f5cc23d5c9cceb',
+  clientSecret: '58178a18d68b1b93b3fec0f35ed016baeb89a03d',
+  repo: 'blog-comment',
+  owner: 'vivizong',
+  // 在这里设置一下截取前50个字符串, 这是因为 github 对 label 的长度有了要求, 如果超过
+  // 50个字符串则会报错.
+  // id: location.pathname.split('/').pop().substring(0, 49),
+  id: md5(location.pathname),
+  admin: ['vivizong'],
+  // facebook-like distraction free mode
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
+<!-- Gitalk代码结束 -->
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+      console.log('js加载成功')
+    });
+    loadScript('/js/changeTitle.js?2232', function() {
+      // load success
+      console.log('js加载成功')
+    });
+  }
+</script>
+
+</body>
+</html>
